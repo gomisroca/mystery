@@ -1,7 +1,17 @@
-import type { NextConfig } from "next";
+import "@/env.js";
+import { env } from "@/env.js";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const config: import("next").NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: env.NEXT_PUBLIC_IMAGE_PROXY_HOSTNAME || "",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
 };
 
-export default nextConfig;
+export default config;
