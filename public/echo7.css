@@ -1,0 +1,17 @@
+/* D. Marlowe — personal stylesheet */
+/* last modified: classified */
+
+body {
+  background: #000080;
+  color: #ffffff;
+}
+
+/* if you're reading this, you already know too much */
+/* the rest is at /echo7 */
+
+a {
+  color: #00ffff;
+}
+a:visited {
+  color: #ff00ff;
+}

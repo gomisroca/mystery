@@ -11,8 +11,8 @@ const VISIT_COOKIES: Record<string, string> = {
   "/1978-08-10": "visited_1978",
   "/eyes-only": "visited_eyes_only",
   "/operation-sundown": "visited_sundown",
+  "/vladivostok": "visited_vladivostok",
 };
-
 const CLEARANCE_ROUTES: Record<
   string,
   { cookie: string; value: string; redirect: string }
@@ -66,5 +66,6 @@ export const config = {
     "/1978-08-10",
     "/eyes-only",
     "/operation-sundown",
+    "/vladivostok",
   ],
 };
