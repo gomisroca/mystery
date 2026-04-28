@@ -12,6 +12,7 @@ const VISIT_COOKIES: Record<string, string> = {
   "/eyes-only": "visited_eyes_only",
   "/operation-sundown": "visited_sundown",
   "/vladivostok": "visited_vladivostok",
+  "/echo7": "visited_echo7",
 };
 const CLEARANCE_ROUTES: Record<
   string,
@@ -67,5 +68,6 @@ export const config = {
     "/eyes-only",
     "/operation-sundown",
     "/vladivostok",
+    "/echo7",
   ],
 };
