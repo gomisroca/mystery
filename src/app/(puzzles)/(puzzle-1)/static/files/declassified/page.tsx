@@ -106,7 +106,7 @@ export default async function DeclassifiedPage() {
               // RAW INTERCEPT — UNDECODED
             </p>
             <p className="text-[#c8b878] text-xl tracking-[0.25em]">
-              UPNOA MHSS UPGZOIHS
+              HIVVY JVUAHJA UPNOAMHSS
             </p>
           </div>
 

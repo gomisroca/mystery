@@ -169,7 +169,7 @@ export default async function NightfallPage() {
                   textAnchor="middle"
                   fontWeight="bold"
                 >
-                  8
+                  08
                 </text>
                 <rect
                   x="2"
