@@ -77,7 +77,12 @@ export default async function OperationSundownPage() {
                   key: "DESIGNATION",
                   val: "ANALYST // DIRECTORATE OF INTELLIGENCE",
                 },
-                { key: "STATUS", val: "MISSING — PRESUMED DEFECTED", hi: true },
+                {
+                  // The CIA's official position — deliberately wrong
+                  key: "STATUS",
+                  val: "MISSING — PRESUMED DEFECTED",
+                  hi: true,
+                },
                 { key: "LAST CONTACT", val: "14 NOV 1973 // SAME AS ECHO-7" },
               ].map(({ key, val, hi }) => (
                 <div key={key}>
@@ -137,7 +142,7 @@ export default async function OperationSundownPage() {
               correspondence archive maintained under the alias{" "}
               <span className="text-[#b09060]">vladivostok</span> — were flagged
               for review but never fully investigated. The archive is believed
-              to still exist somewhere on the public network.
+              to still be accessible on the public network.
             </p>
           </div>
         </div>
@@ -176,6 +181,11 @@ export default async function OperationSundownPage() {
           </div>
 
           {/* Engineer's note — the explicit breadcrumb */}
+          {/*
+            The "restoration engineer" is fictional — Marlowe wrote this note
+            himself, framing it as a confused third party to make the object
+            seem like an accidental discovery rather than a deliberate feature.
+          */}
           <div
             className="border border-[#2a2018] bg-[#080608] p-4
             text-[10px] text-[#3a3028] leading-loose tracking-[0.05em]"
@@ -199,10 +209,16 @@ export default async function OperationSundownPage() {
           tracking-[0.15em] mt-4"
         >
           <span>// END OF PERSONNEL FILE — SUNDOWN</span>
+          <span>ARCHIVIST v0.1</span>
         </div>
       </div>
 
       {/* The actual __echo object — visible in console/source */}
+      {/*
+        Players who reach this page have already proven they know DevTools.
+        The commented hint at the top tells them the object name and method.
+        The callsign NIGHTFALL has been known since /static/files/declassified.
+      */}
       <EchoProtocol />
     </main>
   );

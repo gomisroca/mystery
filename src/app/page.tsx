@@ -45,8 +45,8 @@ export default function LandingPage() {
         </h1>
         <p className="text-sm text-[#4a6a4a] leading-loose max-w-md mx-auto">
           In November 1973, a CIA field operative vanished mid-transmission. The
-          agency sealed the files. Forty years later, someone leaked them. The
-          signal is still out there. So is the operative&apos;s final message.
+          agency sealed the files. Forty years later, the files found their way
+          out. Someone wanted this buried. Someone else didn&apos;t.
         </p>
       </section>
 
@@ -62,7 +62,7 @@ export default function LandingPage() {
           <span className="text-[#8aaa6a]">7.485 MHz</span>. The source: a CIA
           operative known only by the designation{" "}
           <span className="text-[#8aaa6a]">ECHO-7</span>. The transmission
-          lasted 38 seconds before going silent. It has never been publicly
+          lasted 38 seconds before going silent. It has never been officially
           explained.
         </p>
         <p className="text-xs text-[#5a7a5a] leading-loose mb-4">

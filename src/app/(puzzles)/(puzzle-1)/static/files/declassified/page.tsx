@@ -47,6 +47,7 @@ export default async function DeclassifiedPage() {
               <p>DIRECTORATE OF OPERATIONS</p>
               <p>WASHINGTON D.C., 20505</p>
             </div>
+            {/* The key is here — Caesar shift 7, hiding in plain sight */}
             <div className="border-2 border-[#8a3a2a] px-3 py-1.5 text-center">
               <p className="text-[9px] text-[#8a3a2a] tracking-widest">
                 CASE NO.
@@ -96,8 +97,9 @@ export default async function DeclassifiedPage() {
             <span className="bg-[#1a1712] text-transparent select-none px-1">
               PROTOCOL XXXXXX
             </span>
-            . The final word of the transmission is believed to contain the
-            extraction codename.
+            . The final word of the transmission has not been decoded by agency
+            analysts. All SIGMA-level personnel are encouraged to attempt
+            independent decryption.
           </p>
 
           {/* The cipher */}
@@ -110,11 +112,19 @@ export default async function DeclassifiedPage() {
             </p>
           </div>
 
+          {/*
+            HIVVY     = ABORT
+            JVUAHJA   = CONTACT
+            UPNOAMHSS = NIGHTFALL
+            Caesar cipher, shift -7 to decode
+          */}
+
           <p className="text-xs text-[#6a5a4a] italic border-t border-[#c0a870] pt-3 mt-6">
-            * All personnel with SIGMA-level clearance are authorised to attempt
-            decryption. Standard field ciphers apply. Refer to case number for
-            key parameters. The extracted codename will determine your next
-            point of access.
+            * This document is restricted to personnel holding SIGMA-level
+            clearance or above. Unauthorised access is a federal offence under
+            18 U.S.C. § 1030. If you have reached this document in error, cease
+            review immediately and report the access to your supervising
+            officer.
           </p>
         </div>
 

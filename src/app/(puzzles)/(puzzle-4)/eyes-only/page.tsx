@@ -1,11 +1,15 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
+"use client";
 
-export const metadata = {
-  title: "Echo-7 Archive — Eyes Only",
-  description: "CIA Archive — Sigma-7 Authenticated Session",
-};
+import { useEffect } from "react";
 
-export default async function EyesOnlyPage() {
+export default function EyesOnlyPage() {
+  useEffect(() => {
+    fetch("/api/status", {
+      headers: { "X-Session": "SIGMA-7", "X-Node": "ECHO-7" },
+    }).catch(() => {});
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#0a080e] px-4 py-6 font-mono text-[#9a90c0]">
       <div
@@ -37,8 +41,18 @@ export default async function EyesOnlyPage() {
             {[
               { label: "CLEARANCE", val: "SIGMA-7 CONFIRMED", green: true },
               { label: "SESSION OPENED", val: "JUST NOW", green: false },
-              { label: "NODE", val: "ECHO-7 // RESTORED", green: false },
-              { label: "FILES AVAILABLE", val: "PARTIAL", green: true },
+              {
+                // "RESTORED" is Marlowe's cover story — the node never went dark
+                label: "NODE",
+                val: "ECHO-7 // RESTORED",
+                green: false,
+              },
+              {
+                // "PARTIAL" is Marlowe's deliberate choice, not a technical limitation
+                label: "FILES AVAILABLE",
+                val: "PARTIAL",
+                green: true,
+              },
             ].map(({ label, val, green }) => (
               <div key={label} className="bg-[#0a080e] p-4">
                 <p className="text-[9px] text-[#3a3060] tracking-[0.2em] mb-1">
@@ -54,7 +68,13 @@ export default async function EyesOnlyPage() {
           </div>
         </div>
 
-        {/* Communiqué — the nudge */}
+        {/* Communiqué */}
+        {/*
+          This communiqué was written by Marlowe, not by the CIA.
+          "Burn after reading. Do not attempt contact again." is addressed
+          to the player, not to Mara — she was already safe when he wrote this.
+          On a second read, after /echo7, this lands differently.
+        */}
         <div className="border border-t-0 border-[#1e1830] p-6">
           <p className="text-[9px] text-[#3a3060] tracking-[0.25em] mb-4">
             // RECOVERED COMMUNIQUÉ — FINAL DIRECTIVE
@@ -140,26 +160,9 @@ export default async function EyesOnlyPage() {
           tracking-[0.15em] mt-4"
         >
           <span>// ARCHIVIST v0.1 — EYES ONLY MIRROR</span>
+          <span>SIGMA-7 SESSION ACTIVE</span>
         </div>
       </div>
-
-      {/* The actual ping — fires on page load, visible in Network tab */}
-      <PingStatus />
     </main>
-  );
-}
-
-// Client component so it runs in the browser where DevTools can see it
-function PingStatus() {
-  return (
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
-        fetch('/api/status', {
-          headers: { 'X-Session': 'SIGMA-7', 'X-Node': 'ECHO-7' }
-        }).catch(() => {});
-      `,
-      }}
-    />
   );
 }

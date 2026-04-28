@@ -2,7 +2,7 @@
 
 export const metadata = {
   title: "echo7",
-  description: "",
+  description: "echo-7",
 };
 
 export default async function Echo7Page() {
@@ -12,7 +12,7 @@ export default async function Echo7Page() {
         {/* Timestamp */}
         <p className="font-mono text-[10px] text-[#3a3a3a] tracking-widest mb-12">
           // <span className="text-[#5a5a5a]">ECHO-7 PERSONAL NODE</span> — LAST
-          MODIFIED: 27 APR 2026 — AUTHOR: DJM
+          MODIFIED: 28 APR 2026 — AUTHOR: DJM
         </p>
 
         {/* Body */}
@@ -112,6 +112,7 @@ export default async function Echo7Page() {
           <p>
             // <span className="text-[#3a3a3a]">no further records exist</span>
           </p>
+          {/* but {visitCount} found their way here */}
         </div>
       </div>
     </main>

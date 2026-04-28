@@ -32,6 +32,11 @@ export default async function ArchiveNodePage() {
         </div>
 
         {/* System log */}
+        {/*
+          Note: the 2019-11-03 restoration entries are Marlowe's fiction.
+          He planted them to explain the node's existence. There was no
+          official restoration. He never stopped running it.
+        */}
         <div className="border border-t-0 border-[#1a2e1a] p-6">
           <p className="text-[9px] text-[#2a4a2a] tracking-[0.25em] mb-4">
             // SYSTEM LOG — RESTORED ENTRIES
@@ -69,6 +74,7 @@ export default async function ArchiveNodePage() {
                 color: "text-[#6a5a2a]",
               },
               {
+                // Marlowe covering his tracks as he pulls Mara out
                 time: "1978-08-10 03:14",
                 msg: "WARNING — Operator authentication anomaly",
                 val: null,

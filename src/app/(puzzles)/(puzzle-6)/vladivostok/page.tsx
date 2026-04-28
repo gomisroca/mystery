@@ -246,7 +246,7 @@ export default async function VladivostokPage() {
                 <br />
                 This is my small space on the web. I&apos;m{" "}
                 <span style={{ color: "#ffff00" }}>Daniel Marlowe</span> —
-                retired analyst, amateur stargazer, occasional chess player. I
+                former analyst, amateur stargazer, occasional chess player. I
                 put this page together back in{" "}
                 <span style={{ color: "#ffff00" }}>&apos;97</span> mostly for
                 myself. Figured the web was a good place to keep things. Hard to
@@ -287,8 +287,12 @@ export default async function VladivostokPage() {
                   ["Name:", "Daniel J. Marlowe"],
                   ["Location:", "somewhere cold"],
                   ["Born:", "1941, Baltimore MD"],
-                  ["Occupation:", "retired (long story)"],
+                  // "retired (classified)" — dark humour, more accurate than "long story"
+                  // He didn't retire. He ran.
+                  ["Occupation:", "retired (classified)"],
                   ["Interests:", "astronomy, chess, staying quiet"],
+                  // "Since: November 1973" — the most load-bearing line on the page.
+                  // Not a birth date, not a career date. Everything changed in November 1973.
                   ["Since:", "November 1973"],
                 ].map(([k, v]) => (
                   <tr key={k}>
@@ -348,6 +352,13 @@ export default async function VladivostokPage() {
             </div>
 
             {/* Guestbook */}
+            {/*
+              The 2003 anonymous entry is the agency man Marlowe mentions in /echo7.
+              He found the page but never found them.
+              He died in 2011. They sent flowers.
+              Marlowe's reply — "No you don't." — is the only time his voice
+              cracks slightly. He was scared. He didn't show it.
+            */}
             <div style={{ marginBottom: "1.5rem" }}>
               <p
                 style={{

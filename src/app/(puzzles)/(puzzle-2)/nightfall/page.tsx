@@ -72,15 +72,14 @@ export default async function NightfallPage() {
             </p>
             <p>
               All remaining assets were placed under statute{" "}
-              <span className="text-[#b0a870]">78-C </span> of the
+              <span className="text-[#b0a870]">78-C</span> of the
               Director&apos;s Emergency Powers Act, granting{" "}
               <span className="bg-[#1a1a14] text-transparent select-none px-1">
                 XXXXXXXXXX
               </span>{" "}
               authority to terminate field activities without Congressional
-              notification. The statute remains classified. The operation&apos;s
-              final phase was scheduled for execution in the summer of the
-              following year. It is not known whether it proceeded.
+              notification. The statute remains classified. The agency has not
+              confirmed whether the final phase of the operation was executed.
             </p>
           </div>
         </div>
@@ -92,7 +91,7 @@ export default async function NightfallPage() {
           </p>
 
           <div className="grid grid-cols-2 gap-px bg-[#2a2a1e]">
-            {/* Photo 1 — building with door number 8 */}
+            {/* Photo 1 — building with door number 08 */}
             <div className="bg-[#0e0e0c]">
               <svg
                 viewBox="0 0 320 220"
@@ -369,8 +368,10 @@ export default async function NightfallPage() {
               <span className="bg-[#2a1a0a] text-transparent select-none px-1">
                 XXXXXXXXX
               </span>{" "}
-              safehouse, <span className="text-[#8a3a2a]">August</span> sweep.
-              Contents of document in SRV-4418-C remain under{" "}
+              safehouse,{" "}
+              {/* August is a load-bearing word — it is the month fragment: 08 */}
+              <span className="text-[#8a3a2a]">August</span> sweep. Contents of
+              document in SRV-4418-C remain under{" "}
               <span className="bg-[#2a1a0a] text-transparent select-none px-1">
                 XXXXXXXX
               </span>{" "}
@@ -413,9 +414,20 @@ export default async function NightfallPage() {
           </div>
 
           {/* Redacted date — the format hint */}
+          {/*
+            The full date is 1978-08-10.
+            19 = "nineteenth parallel" and "Nineteen confirmed casualties" above
+            78 = statute "78-C" above
+            08 = door number in SRV-4417-B and "August" in field notes
+            10 = document stamp in SRV-4418-C
+          */}
           <div
-            className="bg-[#1a1a14] border-l-3 border-[#5a5a2a] px-5 py-4 my-5"
-            style={{ borderLeftWidth: "3px", borderLeftColor: "#5a5a2a" }}
+            className="bg-[#1a1a14] px-5 py-4 my-5"
+            style={{
+              borderLeftWidth: "3px",
+              borderLeftColor: "#5a5a2a",
+              borderLeftStyle: "solid",
+            }}
           >
             <p className="text-[9px] text-[#4a4a2a] tracking-[0.2em] mb-2">
               // SIGNAL FRAGMENT — UNVERIFIED
@@ -446,14 +458,15 @@ export default async function NightfallPage() {
             <span className="bg-[#1a1a14] text-transparent select-none px-1">
               XXXXXXXXXX
             </span>{" "}
-            authorisation. If you hold SIGMA clearance, you already have what
-            you need.
+            authorisation. Further analysis is pending review by SIGMA-level
+            personnel.
           </p>
         </div>
 
         {/* Footer */}
         <div className="flex justify-between text-[9px] text-[#3a3a2a] tracking-[0.15em] mt-4">
           <span>// END OF RECOVERED DOSSIER</span>
+          <span>ARCHIVIST v0.1</span>
         </div>
       </div>
     </main>
